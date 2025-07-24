@@ -2,9 +2,9 @@
 using namespace std;
 
 void merge(vector<int> &arr, int low, int mid, int high) {
-    vector<int> temp; // temporary array
-    int left = low;      // starting index of left half of arr
-    int right = mid + 1;   // starting index of right half of arr
+    vector<int> temp;
+    int left = low;      
+    int right = mid + 1;  
 
 
     while (left <= mid && right <= high) {
@@ -37,9 +37,9 @@ void merge(vector<int> &arr, int low, int mid, int high) {
 void mergeSort(vector<int> &arr, int low, int high) {
     if (low >= high) return;
     int mid = (low + high) / 2 ;
-    mergeSort(arr, low, mid);  // left half
-    mergeSort(arr, mid + 1, high); // right half
-    merge(arr, low, mid, high);  // merging sorted halves
+    mergeSort(arr, low, mid);  
+    mergeSort(arr, mid + 1, high); 
+    merge(arr, low, mid, high); 
 }
 
 int main() {
